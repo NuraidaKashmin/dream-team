@@ -1,0 +1,104 @@
+
+[
+    {
+      "playerId": 1,
+      "name": "Aaron Mark Hardie",
+      "country": "Australia",
+      "image": "https://i.ibb.co.com/X5YB3mQ/Screenshot-1.jpg",
+      "role": "Batsman",
+      "battingType": "Right-handed",
+      "bowlingType": "Right-arm offbreak",
+      "biddingPrice": 1200000
+    },
+    {
+      "playerId": 2,
+      "name": "Travis Michael Head",
+      "country": "Australia",
+      "image": "https://i.ibb.co.com/nz1Byfk/Screenshot-2.jpg",
+      "role": "Wicketkeeper",
+      "battingType": "Left-handed",
+      "bowlingType": "Right-arm offbreak",
+      "biddingPrice": 950000
+    },
+    {
+      "playerId": 3,
+      "name": "Adam Zampa",
+      "country": "Australia",
+      "image": "https://i.ibb.co.com/HtXtB24/Screenshot-3.jpg",
+      "role": "Bowler",
+      "battingType": "Right-handed",
+      "bowlingType": "Legbreak Googly",
+      "biddingPrice": 1750000
+    },
+    {
+      "playerId": 4,
+      "name": "Mitchell Ross Marsh",
+      "country": "Australia",
+      "image": "https://i.ibb.co.com/JCnM1pM/Screenshot-4.jpg",
+      "role": "All-rounder",
+      "battingType": "Right-handed",
+      "bowlingType": "Right-arm Medium",
+      "biddingPrice": 1450000
+    },
+    {
+      "playerId": 5,
+      "name": "Steven Peter Devereux Smith",
+      "country": "Australia",
+      "image": "https://i.ibb.co.com/8z5C3fb/Screenshot-5.jpg",
+      "role": "Bowler",
+      "battingType": "Right-handed",
+      "bowlingType": "Legbreak Googly",
+      "biddingPrice": 1100000
+    },
+    {
+      "playerId": 6,
+      "name": "Kagiso Rabada",
+      "country": "South Africa",
+      "image": "https://i.ibb.co.com/jTQ3xHP/Screenshot-6.jpg",
+      "role": "Bowler",
+      "battingType": "Left-handed",
+      "bowlingType": "Right-arm Fast",
+      "biddingPrice": 1850000
+    },
+    {
+      "playerId": 7,
+      "name": "Keshav Athmanand Maharaj",
+      "country": "South Africa",
+      "image": "https://i.ibb.co.com/d62dxMZ/Screenshot-7.jpg",
+      "role": "Bowler",
+      "battingType": "Right-handed",
+      "bowlingType": "Slow Left arm Orthodox",
+      "biddingPrice": 1300000
+    },
+    {
+      "playerId": 8,
+      "name": "Rachin Ravindra",
+      "country": "New Zealand",
+      "image": "https://i.ibb.co.com/DKhC3Z7/Screenshot-8.jpg",
+      "role": " Batting all-rounder",
+      "battingType": "Left-handed",
+      "bowlingType": "Slow Left arm Orthodox",
+      "biddingPrice": 800000
+    },
+    {
+      "playerId": 9,
+      "name": "Mitchell Josef Santner",
+      "country": "New Zealand",
+      "image": "https://i.ibb.co.com/sHCkGqW/Screenshot-9.jpg",
+      "role": "Bowling all-rounder",
+      "battingType": "Left-handed",
+      "bowlingType": "Slow Left arm Orthodox",
+      "biddingPrice": 1000000
+    },
+    {
+      "playerId": 10,
+      "name": "William Peter O'Rourke",
+      "country": "New Zealand",
+      "image": "https://i.ibb.co.com/YBdtj4N/Screenshot-10.jpg",
+      "role": "Bowler",
+      "battingType": "Right-handed",
+      "bowlingType": "Right arm Fast medium",
+      "biddingPrice": 1600000
+    }
+  ]
+  
