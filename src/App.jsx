@@ -1,13 +1,15 @@
 
 import './App.css'
+import Header from './Header'
 
 function App() {
   
 
   return (
     <>
-      
-      <h1 className="text-3xl font-bold underline">Dream Team React</h1>
+      <div className='container mx-auto px-4'>
+        <Header></Header>
+      </div>
       
 
     </>
