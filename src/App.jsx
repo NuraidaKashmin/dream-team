@@ -4,6 +4,7 @@ import AllPlayers from './AllPlayers'
 import './App.css'
 import Banner from './Banner'
 import Header from './Header'
+import Button from './Button'
 
 function App() {
 
@@ -21,19 +22,59 @@ function App() {
 
   const [coin, setCoin]= useState(0)
     const handleCoins = () => setCoin((p) => p + 16000000000000);
-  
 
-  return (
-    <>
+
+    const [selectedPlayer, setSelectedPlayer]= useState([])
+
+    const handleSelectedPlayer = (player) => {
+    
+      const isExist = selectedPlayer.find((p)=> p.playerId === player.playerId);
+      if (isExist){
+        alert("Already selected")
+      }
+      else{
+        if (selectedPlayer.length === 6) {
+          alert("Maximum players selected.")
+        } else {
+
+          const newPlayer = [...selectedPlayer, player];
+          setSelectedPlayer(newPlayer)
+        }
+      }
+
+    }
+
+    const removeFromSelectedPlayer = (player) => {
+    
+
+      // reference - https://stackoverflow.com/a/69458984/26135435
+
+      let obj = selectedPlayer.find(o => o.playerId === player);
+
+      const index = selectedPlayer.indexOf(obj);
+      setSelectedPlayer([
+        ...selectedPlayer.slice(0, index),
+        ...selectedPlayer.slice(index + 1)
+      ]);
+
+    }
+
+    
+  
+  
+    return (
+    
+
       <div className='container mx-auto px-4'>
         <Header coin = {coin}></Header>
         <Banner handleCoins ={handleCoins}></Banner>
-        <AllPlayers handleIsActiveState ={handleIsActiveState} isActiveProp={isActive}></AllPlayers>
+        <Button handleIsActiveState={handleIsActiveState} isActiveProp={isActive} selectedPlayerProp={selectedPlayer}></Button>
+        <AllPlayers handleSelectedPlayer={handleSelectedPlayer} handleIsActiveState ={handleIsActiveState} isActiveProp={isActive} selectedPlayerProp={selectedPlayer} removeFromSelectedPlayer={removeFromSelectedPlayer}></AllPlayers>
       </div>
-      
-
-    </>
   )
+  
+
+
 }
 
 export default App

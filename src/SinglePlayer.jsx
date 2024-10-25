@@ -1,9 +1,9 @@
 
-const SinglePlayer = ({ player }) => {
+const SinglePlayer = ({ player, handleSelectedPlayer }) => {
     const { playerId, name, country, image, role, battingType, bowlingType, biddingPrice } = player
 
     return (
-        <div>
+        <div key={playerId}>
             <div className="card card-compact bg-base-100 w-96 shadow-xl">
                 <div className="card-body">
                     <figure>
@@ -38,7 +38,7 @@ const SinglePlayer = ({ player }) => {
                     </div>
                     <div className="flex justify-between items-center">
                         <p className="font-bold">Price: ${biddingPrice}</p>
-                        <button className="btn">Choose Player</button>
+                        <button onClick={()=> handleSelectedPlayer(player)} className="btn">Choose Player</button>
                     </div>
                 </div>
             </div>
