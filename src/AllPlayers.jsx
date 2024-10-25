@@ -64,8 +64,9 @@ const AllPlayers = ({ handleSelectedPlayer, handleIsActiveState, isActiveProp, s
                             
                         </div>)
                     }
-                    <button onClick={()=> handleIsActiveState('available')} className='btn bg-yellow-300 mt-6 mb-6'>Add More Player</button>
+                    <button onClick={()=> handleIsActiveState('available')} className='btn bg-yellow-300 mt-6 mb-40'>Add More Player</button>
                 </div>
+                
             </>
         );
     }

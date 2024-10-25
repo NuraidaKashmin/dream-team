@@ -6,6 +6,8 @@ import Banner from './Banner'
 import Header from './Header'
 import Button from './Button'
 import Footer from './Footer'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
 
@@ -31,15 +33,24 @@ function App() {
     
       const isExist = selectedPlayer.find((p)=> p.playerId === player.playerId);
       if (isExist){
-        alert("Already selected")
+        toast.error("Already selected.", {
+        position: "top-center",
+        theme: "dark"
+      });
       }
       else{
         if (selectedPlayer.length === 6) {
-          alert("Maximum players selected.")
+          toast.error("Maximum players selected.", {
+            position: "top-center",
+            theme: "dark"
+          });
         } else {
           
           if (coin <= 0){
-            alert('Need more coins')
+            toast.error("Need more coins.", {
+              position: "top-center",
+              theme: "dark"
+            });
           } else{
             const newPlayer = [...selectedPlayer, player];
             setSelectedPlayer(newPlayer)
@@ -79,6 +90,7 @@ function App() {
         <Button handleIsActiveState={handleIsActiveState} isActiveProp={isActive} selectedPlayerProp={selectedPlayer}></Button>
         <AllPlayers handleSelectedPlayer={handleSelectedPlayer} handleIsActiveState ={handleIsActiveState} isActiveProp={isActive} selectedPlayerProp={selectedPlayer} removeFromSelectedPlayer={removeFromSelectedPlayer}></AllPlayers>
         <Footer></Footer>
+        <ToastContainer />
       </div>
   )
   
