@@ -5,6 +5,7 @@ import './App.css'
 import Banner from './Banner'
 import Header from './Header'
 import Button from './Button'
+import Footer from './Footer'
 
 function App() {
 
@@ -21,7 +22,7 @@ function App() {
   }
 
   const [coin, setCoin]= useState(0)
-    const handleCoins = () => setCoin((p) => p + 16000000000000);
+    const handleCoins = () => setCoin((p) => p + 16000000);
 
 
     const [selectedPlayer, setSelectedPlayer]= useState([])
@@ -36,9 +37,14 @@ function App() {
         if (selectedPlayer.length === 6) {
           alert("Maximum players selected.")
         } else {
-
-          const newPlayer = [...selectedPlayer, player];
-          setSelectedPlayer(newPlayer)
+          
+          if (coin <= 0){
+            alert('Need more coins')
+          } else{
+            const newPlayer = [...selectedPlayer, player];
+            setSelectedPlayer(newPlayer)
+            setCoin(coin - player.biddingPrice);
+          }
         }
       }
 
@@ -49,13 +55,15 @@ function App() {
 
       // reference - https://stackoverflow.com/a/69458984/26135435
 
-      let obj = selectedPlayer.find(o => o.playerId === player);
+      let obj = selectedPlayer.find(o => o.playerId === player.playerId);
 
       const index = selectedPlayer.indexOf(obj);
       setSelectedPlayer([
         ...selectedPlayer.slice(0, index),
         ...selectedPlayer.slice(index + 1)
       ]);
+
+      setCoin(coin + player.biddingPrice);
 
     }
 
@@ -70,6 +78,7 @@ function App() {
         <Banner handleCoins ={handleCoins}></Banner>
         <Button handleIsActiveState={handleIsActiveState} isActiveProp={isActive} selectedPlayerProp={selectedPlayer}></Button>
         <AllPlayers handleSelectedPlayer={handleSelectedPlayer} handleIsActiveState ={handleIsActiveState} isActiveProp={isActive} selectedPlayerProp={selectedPlayer} removeFromSelectedPlayer={removeFromSelectedPlayer}></AllPlayers>
+        <Footer></Footer>
       </div>
   )
   
