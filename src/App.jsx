@@ -18,13 +18,16 @@ function App() {
       setIsActive("selected")
     }
   }
+
+  const [coin, setCoin]= useState(0)
+    const handleCoins = () => setCoin((p) => p + 16000000000000);
   
 
   return (
     <>
       <div className='container mx-auto px-4'>
-        <Header></Header>
-        <Banner></Banner>
+        <Header coin = {coin}></Header>
+        <Banner handleCoins ={handleCoins}></Banner>
         <AllPlayers handleIsActiveState ={handleIsActiveState} isActiveProp={isActive}></AllPlayers>
       </div>
       
