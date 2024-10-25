@@ -1,7 +1,9 @@
 import bannerImage from './assets/banner-main.png'
 import background from './assets/bg-shadow.png'
 
+
 const Banner = () => {
+
     return (
         <div style={{backgroundImage:`url(${background})`, backgroundRepeat:"no-repeat",backgroundSize:"cover"}} className=' rounded-xl mt-10 mb-10 p-16 bg-gray-950'>
             <div className='grid gap-8  justify-items-center text-center '>
